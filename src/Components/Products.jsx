@@ -9,12 +9,13 @@ const Container = styled.div`
     justify-content:space-between;
 `;
 
-const Products = ({products}) => {
+const Products = () => {
   return (
     <Container>
   
-        <Product products = {products} />
-        
+        <Product/>
+        {/* {console.log("in products")}
+        {console.log(products)} */}
     </Container>
   );
 };

@@ -2,7 +2,8 @@ import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@m
 // import  Icon  from "@mui/material"
 import styled from "styled-components"
 import "./Products.css"
-
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Info=styled.div`
     opacity:0;
@@ -68,20 +69,32 @@ const Icon=styled.div`
     }
 `;
 
-const Product = ({products}) => {
+const Product = () => {
+    const[products, setProducts]= useState([])
+  useEffect(()=>{
+    axios.get("http://127.0.0.1:5001/api/product").then((response)=>{
+      setProducts(response.data)
+      // console.log("raw data")
+      // console.log(response.data)
+      // console.log("pickle")
+      // console.log(products)
+    }).catch((error)=>{
+      throw error
+    });
+  },[]);
   return (
       <>
-            {products.map((item)=>(
+            
+             {products.map((item)=>(
                 <div class= "product-styling" key ={item.id}>
                     <img src={item.img}/> 
                     <h1 class="heading">{item.ProductName}</h1>
                     <p class="description">{item.Description}</p>
                 </div>
-               ))};
-
-    
-
-
+               ))}; 
+               
+               {/* {console.log("in product")}
+               {console.log(products)} */}
      <Container>
         <Circle/>
         {/* <Image src={item.img}/> */}

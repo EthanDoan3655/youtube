@@ -38,17 +38,20 @@ const Option =styled.option`
 
 
 
-const ProductList =({products}) =>{
+const ProductList =() =>{
     return (
+        <>
+
         <Container>
             <Navbar/>
             <Announcement/>
             <Title>All Products</Title>
-            <Products products = {products}/>
+            <Products/>
             <Newsletter/>
             <Footer/>
         </Container>
-    )
-}
+        </>
+    );
+};
 
 export default ProductList
