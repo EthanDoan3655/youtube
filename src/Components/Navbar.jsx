@@ -3,20 +3,14 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import styled from 'styled-components'
 import { mobile } from '../pages/responsive';
-import { Navigate, useNavigate } from "react-router-dom";
-import { Button } from '@mui/material';
+import { BrowserRouter, Navigate, useNavigate } from "react-router-dom";
+import { Button, MenuList } from '@mui/material';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import ProductList from '../pages/ProductList';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,Link} from "react-router-dom";
+import Cart from '../pages/Cart';
 
-const navigateHome = () => {
-  Navigate('/');
-};
-
-const navigateToContacts = ()=>{
-  Navigate('/Contact')
-}
 
 
 const Container = styled.div`
@@ -101,14 +95,14 @@ const Navbar = () => {
             </Logo>
         </Center>
           <Right>
-              <MenuItem>HOME</MenuItem>
-              <MenuItem>PRODUCTS</MenuItem>
+             <MenuItem component={Link} to="/">HOME</MenuItem>
+              <MenuItem component={Link} to="/ProductList">PRODUCTS</MenuItem>
               <MenuItem>CONTACT</MenuItem>
               <MenuItem>
               <Badge badgeContent={4} color="primary">
       <ShoppingCartOutlinedIcon />
              </Badge>
-             </MenuItem>
+             </MenuItem>  
           </Right>
         </Wrapper>
     </Container>

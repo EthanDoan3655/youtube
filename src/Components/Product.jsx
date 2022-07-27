@@ -4,7 +4,6 @@ import styled from "styled-components"
 import "./Products.css"
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
 const Info=styled.div`
     opacity:0;
     width:100%;
@@ -90,6 +89,7 @@ const Product = () => {
                     <img src={item.img}/> 
                     <h1 class="heading">{item.ProductName}</h1>
                     <p class="description">{item.Description}</p>
+                    <h3 class="price">{item.Price}</h3>
                 </div>
                ))}; 
                

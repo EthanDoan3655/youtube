@@ -1,7 +1,7 @@
 import { Send } from '@mui/icons-material'
 import styled from 'styled-components'
 import { mobile } from '../pages/responsive';
-
+import { tablet } from '../pages/responsive'
 
 const Container = styled.div`
     height:60vh;
@@ -10,6 +10,8 @@ const Container = styled.div`
     align-items:center;
     justify-content:center;
     flex-direction:column;
+    ${mobile({display:"none"})}
+    ${tablet({display:"none"})}
 `;
 const Title = styled.h1`
     font-size:70px;

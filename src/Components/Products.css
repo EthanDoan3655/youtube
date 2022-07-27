@@ -1,11 +1,14 @@
 
 .product-styling img{
-    width:100px;
-    height:100px;
+    width:450px;
+    height:450px;
 }
 .heading{
 font-size:30px;
 }
 .description{
     font-size:15px;
+}
+.price{
+    font-size:8;
 }
