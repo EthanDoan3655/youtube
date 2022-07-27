@@ -46,6 +46,17 @@ const ProductList =() =>{
             <Navbar/>
             <Announcement/>
             <Title>All Products</Title>
+            <FilterContainer>
+        <Filter>
+          <FilterText>Filter:</FilterText>
+          <Select>
+            <Option disabled selected>Size</Option>
+            <Option>wheels</Option>
+            <Option>performance</Option>
+            <Option>aesthetic</Option>
+          </Select>
+        </Filter>
+      </FilterContainer>
             <Products/>
             <Newsletter/>
             <Footer/>

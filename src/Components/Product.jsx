@@ -70,7 +70,7 @@ const Icon=styled.div`
 
 const Product = () => {
     const[products, setProducts]= useState([])
-  useEffect(()=>{
+  useEffect(()=>{//The useEffect Hook allows you to perform side effects in your components. Some examples of side effects are: fetching data
     axios.get("http://127.0.0.1:5001/api/product").then((response)=>{
       setProducts(response.data)
       // console.log("raw data")
@@ -96,8 +96,8 @@ const Product = () => {
                {/* {console.log("in product")}
                {console.log(products)} */}
      <Container>
-        <Circle/>
-        {/* <Image src={item.img}/> */}
+        {/* <Circle/>
+       
         <Info>
             <Icon>
                 <ShoppingCartOutlined/>
@@ -108,7 +108,7 @@ const Product = () => {
             <Icon>
                 <FavoriteBorderOutlined/>
             </Icon>
-        </Info>
+        </Info> */}
     </Container>
     </>
   )
